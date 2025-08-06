@@ -68,7 +68,7 @@ sudo apt install ffmpeg
 
 ### Temel Kullanım
 ```bash
-python improved_transcriber.py
+python main.py
 ```
 
 ### Program Akışı
@@ -205,9 +205,6 @@ Detaylı hata bilgileri için `logs/` klasöründeki log dosyalarını kontrol e
 4. Push yapın (`git push origin feature/amazing-feature`)
 5. Pull Request oluşturun
 
-## 📄 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
 
 ## 🙏 Teşekkürler
 
