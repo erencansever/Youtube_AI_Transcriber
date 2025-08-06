@@ -1,53 +1,53 @@
-# 🎬 YouTube Video Transkripsiyon Aracı
+# 🎬 YouTube Video Transcription Tool
 
-YouTube videolarından ses indirip, OpenAI Whisper kullanarak metne çeviren gelişmiş bir Python aracı.
+A powerful Python tool that downloads audio from YouTube videos and converts them to text using OpenAI Whisper.
 
-## ✨ Özellikler
+## ✨ Features
 
-### 🚀 Ana Özellikler
-- **YouTube Video İndirme**: yt-dlp ile güvenilir video indirme
-- **AI Transkripsiyon**: OpenAI Whisper ile yüksek kaliteli konuşma tanıma
-- **Çoklu Dil Desteği**: 100+ dil desteği
-- **Hata Yönetimi**: Otomatik tekrar deneme ve detaylı hata raporlama
-- **Progress Tracking**: Gerçek zamanlı ilerleme takibi
-- **Loglama**: Detaylı log kayıtları
+### 🚀 Core Features
+- **YouTube Video Download**: Reliable video downloading with yt-dlp
+- **AI Transcription**: High-quality speech recognition with OpenAI Whisper
+- **Multi-language Support**: Support for 100+ languages
+- **Error Handling**: Automatic retry mechanism and detailed error reporting
+- **Progress Tracking**: Real-time progress monitoring
+- **Logging**: Detailed log records
 
-### 🔧 Gelişmiş Özellikler
-- **URL Doğrulama**: YouTube URL'lerinin geçerliliğini kontrol
-- **Güvenli Dosya Adları**: Video ID'si ve timestamp ile benzersiz dosya adları
-- **Otomatik Temizlik**: Geçici dosyaların otomatik silinmesi
-- **Model Seçimi**: 5 farklı Whisper modeli (tiny, base, small, medium, large)
-- **Zaman Damgaları**: İsteğe bağlı kelime bazında zaman damgaları
-- **İstatistikler**: Detaylı işlem istatistikleri
+### 🔧 Advanced Features
+- **URL Validation**: Validates YouTube URLs
+- **Safe Filenames**: Unique filenames with video ID and timestamp
+- **Auto Cleanup**: Automatic cleanup of temporary files
+- **Model Selection**: 5 different Whisper models (tiny, base, small, medium, large)
+- **Timestamps**: Optional word-level timestamps
+- **Statistics**: Detailed process statistics
 
-## 📋 Gereksinimler
+## 📋 Requirements
 
 - Python 3.8+
-- FFmpeg (ses işleme için)
-- İnternet bağlantısı
+- FFmpeg (for audio processing)
+- Internet connection
 
-## 🛠️ Kurulum
+## 🛠️ Installation
 
-### 1. Depoyu Klonlayın
+### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd youtube-transcriber
+git clone https://github.com/erencansever/Youtube_AI_Transcriber.git
+cd Youtube_AI_Transcriber
 ```
 
-### 2. Sanal Ortam Oluşturun (Önerilen)
+### 2. Create Virtual Environment (Recommended)
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# veya
+# or
 venv\Scripts\activate     # Windows
 ```
 
-### 3. Bağımlılıkları Yükleyin
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. FFmpeg Kurulumu
+### 4. Install FFmpeg
 
 **macOS:**
 ```bash
@@ -61,93 +61,93 @@ sudo apt install ffmpeg
 ```
 
 **Windows:**
-- [FFmpeg resmi sitesinden](https://ffmpeg.org/download.html) indirin
-- Sistem PATH'ine ekleyin
+- Download from [FFmpeg official site](https://ffmpeg.org/download.html)
+- Add to system PATH
 
-## 🚀 Kullanım
+## 🚀 Usage
 
-### Temel Kullanım
+### Basic Usage
 ```bash
 python improved_transcriber.py
 ```
 
-### Program Akışı
-1. YouTube URL'sini girin
-2. Program otomatik olarak:
-   - Video bilgilerini alır
-   - Ses dosyasını indirir
-   - Transkripsiyon yapar
-   - Sonucu kaydeder
-   - Geçici dosyaları temizler
+### Program Flow
+1. Enter YouTube URL
+2. Program automatically:
+   - Extracts video information
+   - Downloads audio file
+   - Performs transcription
+   - Saves result
+   - Cleans up temporary files
 
-### Örnek Çıktı
+### Example Output
 ```
-🎬 YouTube Video Transkripsiyon Aracı
+🎬 YouTube Video Transcription Tool
 ========================================
-🎥 YouTube URL'sini girin (çıkmak için 'q'): https://youtube.com/watch?v=...
-🚀 İşlem başlatılıyor...
-🎥 YouTube video analiz ediliyor: https://youtube.com/watch?v=...
-📹 Video: Örnek Video Başlığı
-⏱️ Süre: 5:30
-📥 İndiriliyor: 100%|██████████| 15.2MB/15.2MB [00:30<00:00]
-✅ Ses başarıyla indirildi: /tmp/örnek_video.mp3
-🎙️ Transkripsiyon: 100%|██████████| 100/100 [02:15<00:00]
-✅ Transkripsiyon tamamlandı!
-📝 Kelime sayısı: 1,234
-📊 Karakter sayısı: 5,678
-🌍 Algılanan dil: tr
-💾 Transkript kaydedildi: outputs/transcripts/transcript_VIDEOID_20231201_143022.txt
+🎥 Enter YouTube URL (or 'q' to quit): https://youtube.com/watch?v=...
+🚀 Starting process...
+🎥 Analyzing YouTube video: https://youtube.com/watch?v=...
+📹 Video: Example Video Title
+⏱️ Duration: 5:30
+📥 Downloading: 100%|██████████| 15.2MB/15.2MB [00:30<00:00]
+✅ Audio successfully downloaded: /tmp/example_video.mp3
+🎙️ Transcription: 100%|██████████| 100/100 [02:15<00:00]
+✅ Transcription completed!
+📝 Word count: 1,234
+📊 Character count: 5,678
+🌍 Detected language: en
+💾 Transcript saved: outputs/transcripts/transcript_VIDEOID_20231201_143022.txt
 
-🎉 İşlem başarıyla tamamlandı!
-📁 Dosya konumu: outputs/transcripts/transcript_VIDEOID_20231201_143022.txt
-📝 Karakter sayısı: 5,678
+🎉 Process completed successfully!
+📁 File location: outputs/transcripts/transcript_VIDEOID_20231201_143022.txt
+📝 Character count: 5,678
 ```
 
-## 📁 Dosya Yapısı
+## 📁 File Structure
 
 ```
 youtube-transcriber/
-├── improved_transcriber.py    # Ana program
-├── requirements.txt           # Bağımlılıklar
-├── README.md                 # Bu dosya
-├── utils/                    # Yardımcı modüller
+├── improved_transcriber.py    # Main program
+├── requirements.txt           # Dependencies
+├── README.md                 # This file
+├── utils/                    # Helper modules
 │   ├── __init__.py
-│   ├── downloader.py         # YouTube indirme modülü
-│   └── transcriber.py        # Transkripsiyon modülü
-├── outputs/                  # Çıktı dosyaları
-│   └── transcripts/          # Transkript dosyaları
-└── logs/                     # Log dosyaları
+│   ├── downloader.py         # YouTube download module
+│   └── transcriber.py        # Transcription module
+├── outputs/                  # Output files
+│   └── transcripts/          # Transcript files
+└── logs/                     # Log files
 ```
 
-## ⚙️ Konfigürasyon
+## ⚙️ Configuration
 
-### Whisper Modelleri
-- **tiny**: 39M parametre - En hızlı, düşük doğruluk
-- **base**: 74M parametre - Hızlı, orta doğruluk (varsayılan)
-- **small**: 244M parametre - Orta hız, iyi doğruluk
-- **medium**: 769M parametre - Yavaş, yüksek doğruluk
-- **large**: 1550M parametre - En yavaş, en yüksek doğruluk
+### Whisper Models
+- **tiny**: 39M parameters - Fastest, low accuracy
+- **base**: 74M parameters - Fast, medium accuracy (default)
+- **small**: 244M parameters - Medium speed, good accuracy
+- **medium**: 769M parameters - Slow, high accuracy
+- **large**: 1550M parameters - Slowest, highest accuracy
 
-### Desteklenen Diller
-Türkçe, İngilizce, Almanca, Fransızca, İspanyolca ve 100+ dil
+### Supported Languages
+English, Turkish, German, French, Spanish and 100+ languages
 
-## 🔧 Gelişmiş Kullanım
+## 🔧 Advanced Usage
 
-### Programatik Kullanım
+### Programmatic Usage
 ```python
 from utils.downloader import download_audio
 from utils.transcriber import transcribe
 
-# Ses indir
+# Download audio
 audio_path = download_audio("https://youtube.com/watch?v=...")
 
-# Transkripsiyon yap
-transcript = transcribe(audio_path, model_name="medium", language="tr")
+# Perform transcription
+transcript = transcribe(audio_path, model_name="medium", language="en")
 
 print(transcript)
 ```
 
-### Zaman Damgaları ile Transkripsiyon
+### Transcription with Timestamps
 ```python
 from utils.transcriber import transcribe_with_timestamps
 
@@ -156,40 +156,40 @@ for segment in result['segments']:
     print(f"{segment['start']:.2f}s - {segment['end']:.2f}s: {segment['text']}")
 ```
 
-## 🐛 Sorun Giderme
+## 🐛 Troubleshooting
 
-### Yaygın Hatalar
+### Common Errors
 
-**1. FFmpeg bulunamadı**
+**1. FFmpeg not found**
 ```
-❌ FFmpeg bulunamadı. Lütfen FFmpeg'i yükleyin.
+❌ FFmpeg not found. Please install FFmpeg.
 ```
-**Çözüm:** FFmpeg'i sisteminize yükleyin.
+**Solution:** Install FFmpeg on your system.
 
-**2. Model yükleme hatası**
+**2. Model loading error**
 ```
-❌ Model yükleme hatası: CUDA out of memory
+❌ Model loading error: CUDA out of memory
 ```
-**Çözüm:** Daha küçük model kullanın (tiny, base) veya CPU kullanın.
+**Solution:** Use a smaller model (tiny, base) or use CPU.
 
-**3. YouTube indirme hatası**
+**3. YouTube download error**
 ```
-❌ YouTube videosu indirilemedi: Video unavailable
+❌ YouTube video download failed: Video unavailable
 ```
-**Çözüm:** Video URL'sini kontrol edin, video erişilebilir mi?
+**Solution:** Check video URL, is the video accessible?
 
-### Log Dosyaları
-Detaylı hata bilgileri için `logs/` klasöründeki log dosyalarını kontrol edin.
+### Log Files
+Check log files in `logs/` folder for detailed error information.
 
-## 📊 Performans
+## 📊 Performance
 
-### Sistem Gereksinimleri
-- **RAM**: En az 4GB (large model için 8GB+)
-- **CPU**: Modern işlemci (GPU opsiyonel)
-- **Disk**: 1GB+ boş alan
+### System Requirements
+- **RAM**: Minimum 4GB (8GB+ for large model)
+- **CPU**: Modern processor (GPU optional)
+- **Disk**: 1GB+ free space
 
-### Hız Karşılaştırması
-| Model | Parametre | Hız | Doğruluk |
+### Speed Comparison
+| Model | Parameters | Speed | Accuracy |
 |-------|-----------|-----|----------|
 | tiny  | 39M       | ⚡⚡⚡⚡⚡ | ⭐⭐ |
 | base  | 74M       | ⚡⚡⚡⚡ | ⭐⭐⭐ |
@@ -197,31 +197,27 @@ Detaylı hata bilgileri için `logs/` klasöründeki log dosyalarını kontrol e
 | medium| 769M      | ⚡⚡ | ⭐⭐⭐⭐⭐ |
 | large | 1550M     | ⚡ | ⭐⭐⭐⭐⭐ |
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit yapın (`git commit -m 'Add amazing feature'`)
-4. Push yapın (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📄 Lisans
+## 🙏 Acknowledgments
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+- [OpenAI Whisper](https://github.com/openai/whisper) - Speech recognition
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - YouTube downloading
+- [FFmpeg](https://ffmpeg.org/) - Audio processing
 
-## 🙏 Teşekkürler
+## 📞 Support
 
-- [OpenAI Whisper](https://github.com/openai/whisper) - Konuşma tanıma
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - YouTube indirme
-- [FFmpeg](https://ffmpeg.org/) - Ses işleme
-
-## 📞 Destek
-
-Sorunlarınız için:
-1. GitHub Issues kullanın
-2. Log dosyalarını kontrol edin
-3. README'yi tekrar okuyun
+For issues:
+1. Use GitHub Issues
+2. Check log files
+3. Read README again
 
 ---
 
-**Not:** Bu araç eğitim amaçlıdır. Telif hakkı olan içerikleri indirirken yasalara uygun hareket edin. 
+**Note:** This tool is for educational purposes. Please comply with laws when downloading copyrighted content. 
