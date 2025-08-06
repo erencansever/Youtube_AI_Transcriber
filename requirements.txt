@@ -9,9 +9,11 @@ pydub>=0.25.1
 # Konuşma tanıma için (OpenAI Whisper)
 openai-whisper>=20231117
 
-# Alternatif konuşma tanıma seçenekleri
-# speechrecognition>=3.10.0
-# pyaudio>=0.2.11
+# Ses analizi ve duygu tespiti için
+librosa>=0.10.1
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
 
 # Gelişmiş loglama için
 colorlog>=6.7.0
@@ -23,4 +25,11 @@ tqdm>=4.66.1
 pathlib2>=2.3.7
 
 # Hata yönetimi için
-tenacity>=8.2.3 
+tenacity>=8.2.3
+
+# Veri analizi için
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Görselleştirme için
+plotly>=5.15.0 

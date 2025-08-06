@@ -19,6 +19,9 @@ A powerful Python tool that downloads audio from YouTube videos and converts the
 - **Model Selection**: 5 different Whisper models (tiny, base, small, medium, large)
 - **Timestamps**: Optional word-level timestamps
 - **Statistics**: Detailed process statistics
+- **🎭 Emotion Analysis**: AI-powered emotion detection and tone analysis
+- **📊 Audio Visualization**: Interactive charts and emotion timeline
+- **🎵 Speech Pattern Analysis**: Speaking rate, pitch, and energy analysis
 
 ## 📋 Requirements
 
@@ -82,25 +85,47 @@ python main.py
 
 ### Example Output
 ```
-🎬 YouTube Video Transcription Tool
-========================================
-🎥 Enter YouTube URL (or 'q' to quit): https://youtube.com/watch?v=...
-🚀 Starting process...
-🎥 Analyzing YouTube video: https://youtube.com/watch?v=...
-📹 Video: Example Video Title
-⏱️ Duration: 5:30
-📥 Downloading: 100%|██████████| 15.2MB/15.2MB [00:30<00:00]
-✅ Audio successfully downloaded: /tmp/example_video.mp3
-🎙️ Transcription: 100%|██████████| 100/100 [02:15<00:00]
-✅ Transcription completed!
-📝 Word count: 1,234
-📊 Character count: 5,678
-🌍 Detected language: en
-💾 Transcript saved: outputs/transcripts/transcript_VIDEOID_20231201_143022.txt
+🎬 YouTube Video Transkripsiyon ve Duygu Analizi Aracı
+============================================================
+🎥 YouTube URL'sini girin (çıkmak için 'q'): https://youtube.com/watch?v=...
+🎭 Duygu analizi yapılsın mı? (y/n): y
+🚀 İşlem başlatılıyor...
+🎥 Ses indirme denemesi 1/3
+✅ Ses başarıyla indirildi: /tmp/example_video.mp3
+🎙️ Transkripsiyon denemesi 1/3
+✅ Transkripsiyon başarıyla tamamlandı
+🎭 Duygu analizi denemesi 1/3
+✅ Duygu analizi başarıyla tamamlandı!
 
-🎉 Process completed successfully!
-📁 File location: outputs/transcripts/transcript_VIDEOID_20231201_143022.txt
-📝 Character count: 5,678
+==================================================
+🎭 DUYGU ANALİZİ SONUÇLARI
+==================================================
+🌍 Genel Ruh Hali: HAPPY
+📊 Güven Skoru: 0.75
+
+🎵 TON ANALİZİ:
+   • Ortalama Perde: 185.3 Hz
+   • Ortalama Enerji: 0.087
+   • Konuşma Hızı: 145.2 kelime/dakika
+   • Durak Sıklığı: 0.12
+
+🗣️ KONUŞMA KALIPLARI:
+   • Konuşma Süresi: 325.7 saniye
+   • Ses Değişkenliği: 0.045
+   • Perde Değişkenliği: 23.1
+
+😊 DUYGU DAĞILIMI:
+   • Happy: 45.2% (14 segment)
+   • Neutral: 32.3% (10 segment)
+   • Excited: 22.5% (7 segment)
+
+📄 Rapor Dosyası: outputs/analysis/emotion_report_20231201_143022.json
+📈 Görselleştirme: outputs/analysis/emotion_analysis_20231201_143022.png
+
+🎉 İşlem başarıyla tamamlandı!
+📁 Transkript: outputs/transcripts/transcript_VIDEOID_20231201_143022.txt
+📝 Karakter sayısı: 5,678
+🎭 Duygu analizi: outputs/analysis
 ```
 
 ## 📁 File Structure
