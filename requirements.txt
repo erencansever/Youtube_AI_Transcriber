@@ -1,0 +1,26 @@
+# YouTube Video Audio Downloader and Transcriber Dependencies
+
+# YouTube video indirme için
+yt-dlp>=2023.12.30
+
+# Ses işleme için
+pydub>=0.25.1
+
+# Konuşma tanıma için (OpenAI Whisper)
+openai-whisper>=20231117
+
+# Alternatif konuşma tanıma seçenekleri
+# speechrecognition>=3.10.0
+# pyaudio>=0.2.11
+
+# Gelişmiş loglama için
+colorlog>=6.7.0
+
+# Progress bar için
+tqdm>=4.66.1
+
+# Dosya işlemleri için
+pathlib2>=2.3.7
+
+# Hata yönetimi için
+tenacity>=8.2.3 
