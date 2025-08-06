@@ -68,7 +68,7 @@ sudo apt install ffmpeg
 
 ### Basic Usage
 ```bash
-python improved_transcriber.py
+python main.py
 ```
 
 ### Program Flow
@@ -220,4 +220,4 @@ For issues:
 
 ---
 
-**Note:** This tool is for educational purposes. Please comply with laws when downloading copyrighted content. 
+**Note:** This tool is for educational purposes. Please comply with laws when downloading copyrighted content.
